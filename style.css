@@ -76,6 +76,21 @@ body {
   width: 100%;
 }
 
+/* Style personnalisé pour ressembler à un badge arrondi, mais dans le flux de texte */
+.custom-badge-style {
+    /* Maintient la taille de police héritée du H2 */
+    font-size: inherit; 
+    
+    /* Maintient la police en gras comme les autres lettres du H2 */
+    font-weight: inherit; 
+    
+    /* Ajuste le rembourrage pour un look compact dans un titre */
+    padding: 0.1em 0.5em; 
+    
+    /* Assure que l'élément s'aligne joliment avec le texte */
+    vertical-align: middle; 
+}
+
 .carousel-caption {
   bottom: 0;
 }
