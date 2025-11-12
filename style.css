@@ -89,10 +89,3 @@ body {
   font-size: 2rem;
   font-weight: 600;
 }
-
-/* Quand le slide devient actif, le texte remonte */
-.carousel-item.active .animated-text {
-  opacity: 1;
-  transform: translateY(0);
-}
-

@@ -61,11 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Animer la première slide après que le DOM et le rendu soient prêts
     const firstSlide = carousel.querySelector('.carousel-item.active');
-    setTimeout(() => {
     requestAnimationFrame(() => {
         animateText(firstSlide);
     });
-    }, 100);
 
   // Réinitialiser le texte avant la transition
   carousel.addEventListener('slide.bs.carousel', (e) => {
