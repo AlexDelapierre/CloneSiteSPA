@@ -1,3 +1,11 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -115,7 +123,7 @@ section {
   font-weight: 600;
 }
 
-/* -------------------------------------- Hero 1 ----------------------------------- */
+/* -------------------------------------- Section 1 ----------------------------------- */
 
 /* ---Annimation du dynamicText --- */
 /* Style initial du span, pour assurer qu'il est visible au début */
@@ -159,8 +167,8 @@ section {
   /* orange */
 }
 
-/* -------------------------------------- Hero 2 ----------------------------------- */
-.hero-2 {
+/* -------------------------------------- Section 2 ----------------------------------- */
+.section-2 {
   /* height: 50vh; */
   background-image: url('assets/img/Home-hero/bg-motif-beige.jpeg');
   background-repeat: no-repeat;
