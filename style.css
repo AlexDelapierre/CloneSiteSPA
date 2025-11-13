@@ -112,6 +112,8 @@ body {
 .hero-1 {
   /* padding-left: 15rem;
   padding-right: 15rem; */
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 /* ---Annimation du dynamicText --- */
@@ -168,4 +170,6 @@ body {
   background-position: center center;
   padding-left: 15rem;
   padding-right: 15rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
