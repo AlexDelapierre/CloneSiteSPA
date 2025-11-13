@@ -4,6 +4,13 @@ body {
   /* padding: 0; */
 }
 
+section {
+  padding-left: 15rem;
+  padding-right: 15rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 /* Boutons primaires */
 .btn-primary {
   background-color: #ff7f00 !important;
@@ -109,15 +116,8 @@ body {
 }
 
 /* -------------------------------------- Hero 1 ----------------------------------- */
-.hero-1 {
-  /* padding-left: 15rem;
-  padding-right: 15rem; */
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
 
 /* ---Annimation du dynamicText --- */
-
 /* Style initial du span, pour assurer qu'il est visible au début */
 .dynamicText {
   opacity: 1;
@@ -159,8 +159,6 @@ body {
   /* orange */
 }
 
-
-
 /* -------------------------------------- Hero 2 ----------------------------------- */
 .hero-2 {
   /* height: 50vh; */
@@ -168,8 +166,4 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  padding-left: 15rem;
-  padding-right: 15rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
 }
