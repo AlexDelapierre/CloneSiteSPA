@@ -129,3 +129,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// ------------------------ Texte dynamique ------------------------
+
+const texts = ["pépites", "chouchous", "stars", "nouveautés"];
+const textElement = document.getElementById("dynamicText");
+let currentIndex = 0;
+const animationDuration = 500; // Durée de l'animation CSS en ms (0.5s)
+const displayDuration = 4000;  // Durée d'affichage d'un texte avant fondu (5s - 0.5s - 0.5s)
+
+function animateAndChangeText() {
+  // 1. Démarrer le fondu sortant (fade-out)
+  textElement.classList.add('fade-out');
+
+  // 2. Attendre que le fondu sortant soit terminé
+  setTimeout(() => {
+      // Mettre à jour le texte
+      currentIndex = (currentIndex + 1) % texts.length;
+      textElement.textContent = texts[currentIndex];
+
+      // Retirer la classe fade-out pour faire apparaître le nouveau texte
+      textElement.classList.remove('fade-out');
+      
+  }, animationDuration); // Le timeout correspond à la durée de l'animation CSS
+}
+
+// Exécute la fonction une fois au chargement pour afficher le premier texte
+textElement.textContent = texts[currentIndex];
+currentIndex = (currentIndex + 1) % texts.length;
+
+// Répète l'animation et le changement de texte toutes les 5 secondes
+// On doit prendre en compte la durée de l'animation pour le cycle total
+setInterval(animateAndChangeText, displayDuration + animationDuration);

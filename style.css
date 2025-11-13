@@ -104,3 +104,36 @@ body {
   font-size: 2rem;
   font-weight: 600;
 }
+
+/* --------------------------------------Annimation du dynamicText ----------------------------------- */
+
+/* Style initial du span, pour assurer qu'il est visible au début */
+.dynamicText {
+    opacity: 1; /* Complètement visible */
+    transition: opacity 0.5s ease-in-out; /* Transition de 0.5s pour la fluidité */
+    display: inline-block; /* Pour que la transition de l'opacité fonctionne bien */
+}
+
+/* Classe ajoutée par JavaScript pour faire disparaître le texte */
+.dynamicText.fade-out {
+    opacity: 0; /* Complètement transparent */
+    transition: opacity 0.5s ease-in-out; /* Même transition pour le fondu */
+}
+
+/* --------------------------------------mon-hr-personnalise ----------------------------------- */
+
+.mon-hr-personnalise {
+    /* 1. Rendre le hr moins large et le centrer */
+    width: 15vw; /* Moins large : choisissez la taille qui vous plaît (e.g., 100px) */
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* 2. Style des points/tiret et épaisseur */
+    border-top: 4px; /* Augmente l'épaisseur de la ligne */
+    border-style: dotted; /* Les petits points espacés (ou dashed pour des tirets) */
+    opacity: 1; /* S'assure que le hr ne soit pas transparent par défaut */
+}
+
+.border-primary {
+    border-color: #ff7f00 !important; /* orange */
+}
