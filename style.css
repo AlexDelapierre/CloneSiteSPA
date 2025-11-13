@@ -2,19 +2,19 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   /* padding: 0; */
-  height: 2000px; /* Just to enable scrolling for demonstration */
 }
 
 /* Boutons primaires */
 .btn-primary {
-  background-color: #ff7f00 !important;  /* orange */
+  background-color: #ff7f00 !important;
   border-color: #ff7f00 !important;
 }
 
 /* Boutons primaires au survol */
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: #e67300 !important; /* orange plus foncé */
+  /* orange plus foncé */
+  background-color: #e67300 !important;
   border-color: #e67300 !important;
 }
 
@@ -33,12 +33,12 @@ body {
   background-color: #ff7f00 !important;
 }
 
-/* --------------------------------------Header----------------------------------- */
+/* --------------------------------------Top-bar&Navbar----------------------------------- */
 
-.top-bar, 
-.navbar  {
-  padding-left: 15rem;   /* augmente le padding gauche */
-  padding-right: 15rem;  /* augmente le padding droit */
+.top-bar,
+.navbar {
+  padding-left: 15rem;
+  padding-right: 15rem;
 }
 
 .navbar-nav .nav-link {
@@ -46,7 +46,7 @@ body {
 }
 
 .navbar-nav .nav-link:hover {
-  color: #ff7f00; 
+  color: #ff7f00;
 }
 
 /* --------------------------------------Carousel----------------------------------- */
@@ -57,9 +57,12 @@ body {
 .carousel .carousel-caption,
 .carousel .carousel-caption h2 {
   user-select: none;
-  -webkit-user-select: none; /* Chrome, Safari */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* IE/Edge */
+  -webkit-user-select: none;
+  /* Chrome, Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE/Edge */
 }
 
 
@@ -78,17 +81,17 @@ body {
 
 /* Style personnalisé pour ressembler à un badge arrondi, mais dans le flux de texte */
 .custom-badge-style {
-    /* Maintient la taille de police héritée du H2 */
-    font-size: inherit; 
-    
-    /* Maintient la police en gras comme les autres lettres du H2 */
-    font-weight: inherit; 
-    
-    /* Ajuste le rembourrage pour un look compact dans un titre */
-    padding: 0.1em 0.5em; 
-    
-    /* Assure que l'élément s'aligne joliment avec le texte */
-    vertical-align: middle; 
+  /* Maintient la taille de police héritée du H2 */
+  font-size: inherit;
+
+  /* Maintient la police en gras comme les autres lettres du H2 */
+  font-weight: inherit;
+
+  /* Ajuste le rembourrage pour un look compact dans un titre */
+  padding: 0.1em 0.5em;
+
+  /* Assure que l'élément s'aligne joliment avec le texte */
+  vertical-align: middle;
 }
 
 .carousel-caption {
@@ -105,35 +108,64 @@ body {
   font-weight: 600;
 }
 
-/* --------------------------------------Annimation du dynamicText ----------------------------------- */
+/* -------------------------------------- Hero 1 ----------------------------------- */
+.hero-1 {
+  /* padding-left: 15rem;
+  padding-right: 15rem; */
+}
+
+/* ---Annimation du dynamicText --- */
 
 /* Style initial du span, pour assurer qu'il est visible au début */
 .dynamicText {
-    opacity: 1; /* Complètement visible */
-    transition: opacity 0.5s ease-in-out; /* Transition de 0.5s pour la fluidité */
-    display: inline-block; /* Pour que la transition de l'opacité fonctionne bien */
+  opacity: 1;
+  /* Complètement visible */
+  transition: opacity 0.5s ease-in-out;
+  /* Transition de 0.5s pour la fluidité */
+  display: inline-block;
+  /* Pour que la transition de l'opacité fonctionne bien */
 }
 
 /* Classe ajoutée par JavaScript pour faire disparaître le texte */
 .dynamicText.fade-out {
-    opacity: 0; /* Complètement transparent */
-    transition: opacity 0.5s ease-in-out; /* Même transition pour le fondu */
+  opacity: 0;
+  /* Complètement transparent */
+  transition: opacity 0.5s ease-in-out;
+  /* Même transition pour le fondu */
 }
 
-/* --------------------------------------mon-hr-personnalise ----------------------------------- */
+/* ---mon-hr-personnalise ---*/
 
 .mon-hr-personnalise {
-    /* 1. Rendre le hr moins large et le centrer */
-    width: 15vw; /* Moins large : choisissez la taille qui vous plaît (e.g., 100px) */
-    margin-left: auto;
-    margin-right: auto;
-    
-    /* 2. Style des points/tiret et épaisseur */
-    border-top: 4px; /* Augmente l'épaisseur de la ligne */
-    border-style: dotted; /* Les petits points espacés (ou dashed pour des tirets) */
-    opacity: 1; /* S'assure que le hr ne soit pas transparent par défaut */
+  /* 1. Rendre le hr moins large et le centrer */
+  width: 15vw;
+  /* Moins large : choisissez la taille qui vous plaît (e.g., 100px) */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* 2. Style des points/tiret et épaisseur */
+  border-top: 4px;
+  /* Augmente l'épaisseur de la ligne */
+  border-style: dotted;
+  /* Les petits points espacés (ou dashed pour des tirets) */
+  opacity: 1;
+  /* S'assure que le hr ne soit pas transparent par défaut */
 }
 
 .border-primary {
-    border-color: #ff7f00 !important; /* orange */
+  border-color: #ff7f00 !important;
+  /* orange */
+}
+
+
+
+/* -------------------------------------- Hero 2 ----------------------------------- */
+.hero-2 {
+  /* height: 50vh; */
+  background-image: url('assets/img/Home-hero/bg-motif-beige.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding-left: 15rem;
+  padding-right: 15rem;
 }
