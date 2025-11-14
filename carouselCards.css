@@ -40,6 +40,27 @@
   margin: auto;
 }
 
+#carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 8px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.carousel-dot.active {
+  background-color: #333;
+  transform: scale(1.2);
+}
+
 @media (max-width: 770px) {
   #carousel-vp {
     width: 510px;

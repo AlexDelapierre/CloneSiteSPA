@@ -70,3 +70,57 @@ function mediaManagement() {
 
   oldViewportWidth = newViewportWidth;
 }
+
+/* =============================
+   GESTION DES DOTS (petits points)
+   ============================= */
+
+// Nombre total d’items dans le carousel
+const items = document.querySelectorAll(".cCarousel-item");
+const itemCount = items.length;
+
+// Conteneur des dots
+const dotsContainer = document.querySelector("#carousel-dots");
+
+// Création des dots
+for (let i = 0; i < itemCount; i++) {
+  const dot = document.createElement("div");
+  dot.classList.add("carousel-dot");
+  if (i === 0) dot.classList.add("active"); // premier actif
+  dot.dataset.index = i;
+  dotsContainer.appendChild(dot);
+}
+
+const dots = document.querySelectorAll(".carousel-dot");
+
+/* =============================
+   Fonction pour mettre à jour les dots
+   ============================= */
+function updateDots() {
+  const index = Math.abs(leftValue / totalMovementSize);
+
+  dots.forEach((dot) => dot.classList.remove("active"));
+  if (dots[index]) dots[index].classList.add("active");
+}
+
+/* =============================
+   Clic sur un dot → aller à cette card
+   ============================= */
+dots.forEach((dot) => {
+  dot.addEventListener("click", () => {
+    const index = Number(dot.dataset.index);
+
+    leftValue = -index * totalMovementSize;
+    cCarouselInner.style.left = leftValue + "px";
+
+    updateDots();
+  });
+});
+
+/* =============================
+   On met à jour les dots après
+   chaque clic sur prev / next
+   ============================= */
+prev.addEventListener("click", updateDots);
+next.addEventListener("click", updateDots);
+
