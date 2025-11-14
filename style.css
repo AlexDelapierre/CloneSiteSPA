@@ -21,21 +21,26 @@ section {
 
 /* Boutons primaires */
 .btn-primary {
-  background-color: #ff7f00 !important;
-  border-color: #ff7f00 !important;
+  background-color: #c29356 !important;
+  border-color: #c29356 !important;
+}
+
+.btn-secondary {
+  background-color: #ff798f !important;
+  border-color: #ff798f !important;
 }
 
 /* Boutons primaires au survol */
 .btn-primary:hover,
 .btn-primary:focus {
   /* orange plus foncé */
-  background-color: #e67300 !important;
-  border-color: #e67300 !important;
+  background-color: #0a303a !important;
+  border-color: #0a303a !important;
 }
 
 /* Liens text-primary */
 .text-primary {
-  color: #ff7f00 !important;
+  color: #c29356 !important;
 }
 
 /* Liens text-primary au survol */
@@ -45,7 +50,7 @@ section {
 
 /* Background bg-primary */
 .bg-primary {
-  background-color: #ff7f00 !important;
+  background-color: #c29356 !important;
 }
 
 /* --------------------------------------Top-bar&Navbar----------------------------------- */
@@ -61,7 +66,7 @@ section {
 }
 
 .navbar-nav .nav-link:hover {
-  color: #ff7f00;
+  color: #c29356 !important;
 }
 
 /* --------------------------------------Carousel----------------------------------- */
@@ -103,7 +108,7 @@ section {
   font-weight: inherit;
 
   /* Ajuste le rembourrage pour un look compact dans un titre */
-  padding: 0.1em 0.5em;
+  padding: 0.4em 0.5em;
 
   /* Assure que l'élément s'aligne joliment avec le texte */
   vertical-align: middle;
@@ -196,4 +201,19 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+}
+
+.copyright {
+  background-color: #0a303a;
+  color: white;
+}
+
+.footer-link {
+  text-decoration: none; 
+  color: inherit; 
+  transition: color 0.3s; 
+}
+
+.footer-link:hover {
+  color: #c29356; 
 }
