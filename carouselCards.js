@@ -1,39 +1,50 @@
 const prev = document.querySelector("#prev");
 const next = document.querySelector("#next");
 
-let carouselVp = document.querySelector("#carousel-vp");
+const carouselVp = document.querySelector("#carousel-vp");
+const cCarouselInner = document.querySelector("#cCarousel-inner");
 
-let cCarouselInner = document.querySelector("#cCarousel-inner");
-let carouselInnerWidth = cCarouselInner.getBoundingClientRect().width;
-
+// Position actuelle du carousel
 let leftValue = 0;
 
-// Variable used to set the carousel movement value (card's width + gap)
-const totalMovementSize =
-  parseFloat(
-    document.querySelector(".cCarousel-item").getBoundingClientRect().width,
-    10
-  ) +
-  parseFloat(
-    window.getComputedStyle(cCarouselInner).getPropertyValue("gap"),
-    10
-  );
+// Taille totale d’un déplacement : 1 card + gap
+const item = document.querySelector(".cCarousel-item");
+const itemWidth = item.getBoundingClientRect().width;
+const gap = parseFloat(window.getComputedStyle(cCarouselInner).gap);
+const totalMovementSize = itemWidth + gap;
 
+// Largeur totale du conteneur interne (toutes les cards)
+let carouselInnerWidth = cCarouselInner.getBoundingClientRect().width;
+
+/* =====================
+   BOUTON PREV
+   ===================== */
 prev.addEventListener("click", () => {
-  if (!leftValue == 0) {
-    leftValue -= -totalMovementSize;
+  // On peut aller vers la gauche uniquement si leftValue < 0
+  if (leftValue < 0) {
+    leftValue += totalMovementSize;
     cCarouselInner.style.left = leftValue + "px";
   }
 });
 
+/* =====================
+   BOUTON NEXT
+   ===================== */
 next.addEventListener("click", () => {
-  const carouselVpWidth = carouselVp.getBoundingClientRect().width;
-  if (carouselInnerWidth - Math.abs(leftValue) > carouselVpWidth) {
+  const vpWidth = carouselVp.getBoundingClientRect().width;
+
+  const remainingWidth = carouselInnerWidth - Math.abs(leftValue);
+
+  // On peut aller vers la droite tant qu’il reste plus que la largeur visible
+  if (remainingWidth > vpWidth) {
     leftValue -= totalMovementSize;
     cCarouselInner.style.left = leftValue + "px";
   }
 });
 
+/* =====================
+   RESPONSIVE
+   ===================== */
 const mediaQuery510 = window.matchMedia("(max-width: 510px)");
 const mediaQuery770 = window.matchMedia("(max-width: 770px)");
 
@@ -45,16 +56,17 @@ let oldViewportWidth = window.innerWidth;
 function mediaManagement() {
   const newViewportWidth = window.innerWidth;
 
-  if (leftValue <= -totalMovementSize && oldViewportWidth < newViewportWidth) {
+  // Vue élargie → on recule d’une card si possible (pour éviter un trou)
+  if (newViewportWidth > oldViewportWidth && leftValue <= -totalMovementSize) {
     leftValue += totalMovementSize;
     cCarouselInner.style.left = leftValue + "px";
-    oldViewportWidth = newViewportWidth;
-  } else if (
-    leftValue <= -totalMovementSize &&
-    oldViewportWidth > newViewportWidth
-  ) {
+  }
+
+  // Vue rétrécie → on avance d’une card si possible
+  if (newViewportWidth < oldViewportWidth && leftValue <= -totalMovementSize) {
     leftValue -= totalMovementSize;
     cCarouselInner.style.left = leftValue + "px";
-    oldViewportWidth = newViewportWidth;
   }
+
+  oldViewportWidth = newViewportWidth;
 }
