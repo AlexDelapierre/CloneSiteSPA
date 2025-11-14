@@ -175,3 +175,17 @@ section {
   background-size: cover;
   background-position: center center;
 }
+
+/* -------------------------------------- Section 4 ----------------------------------- */
+
+.section-4 {
+  background-color:#d5e6eb;
+}
+.section-4 .stats-grid {
+  color: #6d98a8;
+  font-size: 1.5rem;
+}
+.section-4 .stats-grid-number {
+  font-size: 4.5rem;
+  font-weight: bold;
+}
