@@ -6,6 +6,26 @@
   box-sizing: border-box;
 }
 
+/* Définissez les variables de couleur au niveau racine (root) */
+:root {
+  --bs-primary: #c29356; 
+  
+  /* Version RGB de votre nouvelle couleur (c'est essentiel pour les opacités de Bootstrap) */
+  /* RGB de #c29356 est 194, 147, 86 */
+  --bs-primary-rgb: 194, 147, 86;
+  
+  /* VOTRE NOUVELLE COULEUR SECONDAIRE (ex: #ff798f) */
+  --bs-secondary: #ff798f;
+  
+  /* Version RGB de votre nouvelle couleur secondaire (255, 121, 143) */
+  --bs-secondary-rgb: 255, 121, 143;
+  
+  /* ------------------------------------------------------------- */
+  /* OPTIONNEL : Si vous voulez un hover plus foncé/spécifique. 
+     Bootstrap calcule généralement le hover, mais vous pouvez le forcer. */
+  --bs-primary-hover: #0a303a;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -54,11 +74,11 @@ section {
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none !important;
+    color: inherit !important;
 }
 
-/* --------------------------------------Top-bar&Navbar----------------------------------- */
+/* --------------------------------------Header----------------------------------- */
 
 .top-bar,
 .navbar {
@@ -72,6 +92,23 @@ a {
 
 .navbar-nav .nav-link:hover {
   color: #c29356 !important;
+}
+
+/* --------------------------------------Hero-banner----------------------------------- */
+.hero-banner {
+  background-image: url('assets/img/Hero-banner/page-profil.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-banner h1 {
+  padding-left: 15rem;
 }
 
 /* -------------------------------------- mon-hr-personnalise  ----------------------------------- */
@@ -92,7 +129,7 @@ a {
 }
 
 .border-primary {
-  border-color: #ff7f00 !important;
+  border-color: #c29356 !important;
   /* orange */
 }
 
