@@ -53,6 +53,11 @@ section {
   background-color: #c29356 !important;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* --------------------------------------Top-bar&Navbar----------------------------------- */
 
 .top-bar,
