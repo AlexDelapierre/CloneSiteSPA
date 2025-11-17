@@ -1,15 +1,92 @@
-.Hero-banner {
-  background-image: url('assets/img/page-profil.jpeg');
-  background-size: cover;
-  background-position: center;
-  height: 40vh;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+/* -------------------------------------- ul.checklist -----------------------------------  */
+/* Styles pour la liste minimaliste et accessible */
+  ul.checklist {
+    list-style: none;      /* Supprime les puces par défaut */
+    padding-left: 0;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+  }
+
+  ul.checklist li {
+    position: relative;
+    padding-left: 2rem;    /* Espace pour le symbole */
+    margin-bottom: 0.75rem;
+  }
+
+  /* Ajout du symbole ✓ avant chaque li */
+  ul.checklist li::before {
+    content: "✓";
+    color: green;          /* Couleur du symbole */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 1;        /* Aligne verticalement le symbole avec le texte */
+  }
+
+  /* Optionnel : rendre le symbole invisible aux lecteurs d’écran 
+     si tu veux qu’ils lisent seulement le texte */
+  ul.checklist li::before {
+    aria-hidden: true;
+  }
+
+/* -------------------------------------- content-with-image-container -----------------------------------  */
+/* Conteneur principal (pour le mode desktop) */
+.content-with-image-container {
+  display: flex; /* Active Flexbox */
+  gap: 20px; /* Espace entre le contenu et l'image */
+  align-items: flex-start; /* Aligner les éléments en haut */
 }
 
-.Hero-banner h1 {
-  padding-left: 15rem;
+/* Votre div de contenu */
+.main-content {
+  flex: 3; /* Donne 3 parts de l'espace disponible au contenu (ex: 75% si l'image prend 1 part) */
+  min-width: 0; /* Important pour éviter les problèmes avec un contenu trop long */
+}
+
+/* Le conteneur de l'image */
+.side-image {
+  flex: 1; /* Donne 1 part de l'espace disponible à l'image (ex: 25%) */
+  min-width: 150px; /* Largeur minimale de l'image, ajustez au besoin */
+}
+
+/* L'image elle-même pour qu'elle s'adapte à son conteneur */
+.side-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ------------------------------------------- */
+/* Media Query pour le mode Mobile (écrans < 768px) */
+/* ------------------------------------------- */
+@media (max-width: 768px) {
+  .content-with-image-container {
+    flex-direction: column; /* Les éléments passent en colonne (l'un sous l'autre) */
+  }
+  
+  /* Vous pouvez choisir où vous voulez que l'image apparaisse en mobile : */
+  /* Si vous voulez l'image en haut (avant le texte) : aucune modification nécessaire */
+  /* Si vous voulez l'image en bas (après le texte) : */
+  .side-image {
+    order: 1; /* Définit l'ordre de l'image, 1 la place après l'élément avec order: 0 (le main-content par défaut) */
+  }
+}
+
+/* -------------------------------------- Vidéo -----------------------------------  */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* ratio 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
