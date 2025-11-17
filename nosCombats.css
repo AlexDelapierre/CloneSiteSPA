@@ -1,8 +1,3 @@
-/* #nos-combats div {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-} */
-
 /* -------------------------------------- ul.checklist -----------------------------------  */
 /* Styles pour la liste minimaliste et accessible */
   ul.checklist {
@@ -27,12 +22,6 @@
     left: 0;
     top: 0;
     line-height: 1;        /* Aligne verticalement le symbole avec le texte */
-  }
-
-  /* Optionnel : rendre le symbole invisible aux lecteurs d’écran 
-     si tu veux qu’ils lisent seulement le texte */
-  ul.checklist li::before {
-    aria-hidden: true;
   }
 
 /* -------------------------------------- content-with-image-container -----------------------------------  */
