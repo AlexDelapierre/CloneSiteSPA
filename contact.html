@@ -18,12 +18,259 @@
   <link rel="stylesheet" href="home.css">
   <link rel="stylesheet" href="carouselCards.css">
 </head>
-<main>
+
+<body>
+  <header>
+    <!-- Top-bar -->
+    <div id="top-bar" class="top-bar d-flex justify-content-between align-items-center py-2 py-lg-3 bg-light">
+      <span class="d-flex align-items-center">
+        <a href="#"><i class="fas fa-bullhorn"></i></i> Signalement</a>
+      </span>
+      <span class="d-flex align-items-center">
+        Nous suivre :
+        <a href="#"><i aria-hidden="true" class="fab fa-facebook"></i></a>
+        <a href="#"><i aria-hidden="true" class="fab fa-instagram"></i></a>
+      </span>
+    </div>
+
+    <!-- Navbar normale -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white py-2 py-lg-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="assets/img/Logo/spa-logo.png" width="120" alt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Le refuge</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="nosCombats.html">Nos combats</a></li>
+                <li><a class="dropdown-item" href="#">Pension</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Nos animaux</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Nos chiens</a></li>
+                <li><a class="dropdown-item" href="#">Nos chats</a></li>
+                <li><a class="dropdown-item" href="#">Nos NAC</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Nous aider</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Dons monétaires</a></li>
+                <li><a class="dropdown-item" href="#">Dons matériels</a></li>
+                <li><a class="dropdown-item" href="#">Legs</a></li>
+                <li><a class="dropdown-item" href="#">Parrainage</a></li>
+                <li><a class="dropdown-item" href="#">Devenir bénévole</a></li>
+                <li><a class="dropdown-item" href="#">Devenir membre</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">infos pratiques</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Nos conseils</a></li>
+                <li><a class="dropdown-item" href="#">Signalement</a></li>
+                <li><a class="dropdown-item" href="#">Adopter un chat</a></li>
+                <li><a class="dropdown-item" href="#">Adopter un chien</a></li>
+                <li><a class="dropdown-item" href="#">Adopter un NAC</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+          <div class="d-flex">
+            <button class="btn btn-primary" type="button"><i aria-hidden="true"
+                class="fas fa-hand-holding-heart"></i>Faire un don</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!----------------------------------------- Bannière ------------------------------------------------>
+  <div class="hero-banner">
+    <h1>Contact</h1>
+  </div>
+
+  <main>
+    <section class="d-flex justify-content-center bg-secondary">
+      <div class="d-flex" style="gap: 5vw;">
+
+        <div class="p-3 border bg-white shadow rounded-4">
+          <header class="">
+            <h2>Des questions ?</h2>
+            <p>
+              N’hésitez pas à nous contacter via notre formulaire
+            </p>
+            <hr class="mon-hr-personnalise border-primary">
+          </header>
+          <form action="">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nom</label>
+              <input type="text" class="form-control" id="name" placeholder="Votre nom">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Votre email">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Votre message"></textarea>
+            </div>
+            <div>
+              <span>Traitement des données personnelles </span><br>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="agreement" name="agreement" value="true">
+                <label class="form-check-label" for="agreement">
+                  En cochant cette case et en validant ce formulaire, je donne mon consentement sur le traitement de mes
+                  données personnelles par la SPA de Haguenau & Environs. Vos données seront conservées par la SPA de
+                  Haguenau & Environs le temps de traiter votre demande. Vous pouvez à tout moment retirer votre
+                  consentement au traitement de vos données, vous opposer à leur traitement, y accéder, les rectifier,
+                  demander leur effacement ou exercer votre droit à la limitation du traitement de vos données.
+                  Consultez
+                  le site cnil.fr pour plus d’informations sur vos droits. Pour exercer ces droits ou pour toute
+                  question sur
+                  le traitement de vos données dans ce dispositif, vous pouvez contacter la CNIL.
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+          </form>
+        </div>
+
+        <div class="p-3">
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d52833.41498746019!2d6.135494412831979!3d45.89702626346645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1763457416269!5m2!1sfr!2sfr"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <h3>Horaires d'ouverture</h3>
+          <p>
+            La S.P.A. vous accueille tous les jours de 14h à 17h <strong>sauf le mercredi et le dimanche, jours fériés
+              inclus.</strong><br>Elle ouvre exceptionnellement ses portes chaque <strong>1<sup>er</sup> dimanche du
+              mois</strong> de 14h à 17h.
+          </p>
+
+          <a href="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d52833.41498746019!2d6.135494412831979!3d45.89702626346645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1763457416269!5m2!1sfr!2sfr"
+            class="text-decoration-none text-dark d-block">
+            <div class="d-flex align-items-start py-2">
+              <div
+                class="flex-shrink-0 me-3 bg-primary text-white rounded-circle p-2 fs-5 d-flex align-items-center justify-content-center"
+                style="width: 2.5rem; height: 2.5rem;">
+                <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="flex-grow-1">
+                <span class="d-block fw-bold mb-1">
+                  SPA de HAGUENAU & Environs
+                </span>
+                <p class="text-muted mb-0">
+                  Route de Schirrhein <br>67500 HAGUENAU
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <a href="tel:0388730133" class="text-decoration-none text-dark d-block">
+            <div class="d-flex align-items-center py-2">
+              <div
+                class="flex-shrink-0 me-3 bg-primary text-white rounded-circle p-2 fs-5 d-flex align-items-center justify-content-center"
+                style="width: 2.5rem; height: 2.5rem;">
+                <i aria-hidden="true" class="fas fa-phone"></i>
+              </div>
+              <div class="flex-grow-1">
+                <span class="d-block fw-bold mb-1">
+                  03 88 73 01 33
+                </span>
+                <p class="text-muted mb-0 text-primary">
+                  Nous appeler
+                </p>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <header class="text-center mb-5">
+        <h2>Nos adresses utiles</h2>
+        <p>
+          Des grands cœurs dans des petits compagnons, craquez comme nous… sans modération !
+        </p>
+        <hr class="mon-hr-personnalise border-primary">
+      </header>
+
+      <div class="card p-3 mb-3 d-flex flex-row align-items-center bg-body-tertiary border-0">
+        <div class="col-auto me-3">
+          <div class="text-center">
+            <img decoding="async" width="150" height="150"
+              src="https://www.spahaguenau.org/wp-content/uploads/2025/09/adresses-utiles-1-150x150.jpg"
+              class="img-fluid rounded-circle" alt="Fourrière animale">
+          </div>
+        </div>
+        <div class="col">
+          <div class="mb-2">
+            <h3 class="h4">Fourrière animale</h3>
+          </div>
+          <div>
+            <p class="mb-2">
+              Vous avez perdu ou trouvé un animal ? Nous vous invitons à&nbsp;
+              <a href="https://www.facebook.com/Fourri%C3%A8re-Animale-de-Haguenau-367231137386371" target="_blank"
+                rel="noopener noreferrer nofollow">
+                <span class="text-primary">contacter la Fourrière Animale de Haguenau</span>
+              </a>.&nbsp;
+            </p>
+            <p class="mb-0">La SPA de Haguenau &amp; Environs et la fourrière étant deux entités différentes, la
+              fourrière reste votre interlocuteur privilégié si vous trouvez ou perdez un compagnon : elle prend en
+              charge les animaux trouvés sur la voie publique et gère les cas de disparitions. L’équipe de la fourrière
+              est bien sûr à votre écoute pour répondre à vos questions et tenir compte de vos signalements.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card p-3 mb-3 d-flex flex-row align-items-center bg-body-tertiary border-0">
+        <div class="col-auto me-3">
+          <div class="text-center">
+            <img decoding="async" width="150" height="150"
+              src="https://www.spahaguenau.org/wp-content/uploads/2025/10/logo-cnda-150.png" class="img-fluid"
+              alt="Logo Confédération nationale défense de l’animal">
+          </div>
+        </div>
+        <div class="col">
+          <div class="mb-2">
+            <h3 class="h4">La Confédération nationale défense de l’animal</h3>
+          </div>
+          <div>
+            <p class="mb-1">
+              La Confédération rassemble près de 270 associations qui œuvrent pour la protection animale.
+              Ces associations qui partagent des valeurs communes sont indépendantes et se gèrent financièrement grâce
+              aux dons qui leur sont versés. La SPA de Haguenau &amp; Environs en est membre.
+            </p>
+            <p class="mb-0">
+              En savoir plus sur&nbsp;
+              <a href="https://www.defensedelanimal.fr/" target="_blank" rel="noopener noreferrer nofollow">
+                <span class="text-primary">La Confédération Nationale Défense de l’Animal.</span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
 
 
-  
-</main>
- <!-- Footer -->
+    </section>
+
+
+
+
+  </main>
+
+  <!-- Footer -->
   <footer>
     <div class="container py-5">
       <div class="row g-4">
@@ -107,4 +354,5 @@
   <script src="script.js"></script>
   <script src="carouselCards.js"></script>
 </body>
+
 </html>

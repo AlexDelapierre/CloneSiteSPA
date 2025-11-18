@@ -73,6 +73,21 @@ section {
   background-color: #c29356 !important;
 }
 
+.bg-secondary {
+  background-image: url('assets/img/Home-hero/bg-motif-beige.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.section-2 {
+  /* height: 50vh; */
+  background-image: url('assets/img/Home-hero/bg-motif-beige.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
 a {
     text-decoration: none !important;
     color: inherit !important;
