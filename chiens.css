@@ -4,11 +4,7 @@
   background-color: #F4F1EA;
 }
 
-/* Ajoutez ceci à votre fichier style.css */
-/* Ajoutez ceci à votre fichier style.css */
 .form-check-inline {
-    /* Écrase la marge par défaut de Bootstrap. 
-       Utilisez une valeur plus petite que celle par défaut (généralement 1rem ou 0.75rem) */
     margin-right: 0.5rem !important; 
 }
 
@@ -18,5 +14,5 @@
 .page-item.active .page-link {
     background-color: var(--bs-primary) !important;
     border-color: var(--bs-primary) !important;
-    color: white !important; /* Pour garantir la lisibilité du texte sur votre couleur */
+    color: white !important; /* Pour garantir la lisibilité du texte */
 }

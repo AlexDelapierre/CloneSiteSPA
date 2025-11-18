@@ -6,69 +6,31 @@
   box-sizing: border-box;
 }
 
-/* Définissez les variables de couleur au niveau racine (root) */
 :root {
   --bs-primary: #c29356; 
-  
   /* Version RGB de votre nouvelle couleur (c'est essentiel pour les opacités de Bootstrap) */
   /* RGB de #c29356 est 194, 147, 86 */
   --bs-primary-rgb: 194, 147, 86;
-  
-  /* VOTRE NOUVELLE COULEUR SECONDAIRE (ex: #ff798f) */
-  --bs-secondary: #ff798f;
-  
-  /* Version RGB de votre nouvelle couleur secondaire (255, 121, 143) */
-  --bs-secondary-rgb: 255, 121, 143;
-  
-  /* ------------------------------------------------------------- */
-  /* OPTIONNEL : Si vous voulez un hover plus foncé/spécifique. 
-     Bootstrap calcule généralement le hover, mais vous pouvez le forcer. */
   --bs-primary-hover: #0a303a;
+  --bs-secondary: #ff798f;
+  --bs-secondary-rgb: 255, 121, 143;
 }
 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  /* padding: 0; */
 }
 
-section {
-  padding-left: 15rem;
-  padding-right: 15rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-/* Boutons primaires */
-.btn-primary {
-  background-color: #c29356 !important;
-  border-color: #c29356 !important;
-}
-
-.btn-secondary {
-  background-color: #ff798f !important;
-  border-color: #ff798f !important;
-}
-
-/* Boutons primaires au survol */
-.btn-primary:hover,
-.btn-primary:focus {
-  /* orange plus foncé */
-  background-color: #0a303a !important;
-  border-color: #0a303a !important;
-}
-
-/* Liens text-primary */
+/* -------------------------------------- Couleur texte ----------------------------------- */
 .text-primary {
   color: #c29356 !important;
 }
 
-/* Liens text-primary au survol */
 .text-primary:hover {
   color: #e67300 !important;
 }
 
-/* Background bg-primary */
+/* -------------------------------------- Background ----------------------------------- */
 .bg-primary {
   background-color: #c29356 !important;
 }
@@ -80,12 +42,40 @@ section {
   background-position: center center;
 }
 
-.section-2 {
-  /* height: 50vh; */
+.bg-tertiary {
   background-image: url('assets/img/Home-hero/bg-motif-beige.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+}
+
+.bg-quaternary {
+  background-color: #d5e6eb; 
+}
+
+/* -------------------------------------- Boutons ----------------------------------- */
+.btn-primary {
+  background-color: #c29356 !important;
+  border-color: #c29356 !important;
+}
+
+.btn-secondary {
+  background-color: #ff798f !important;
+  border-color: #ff798f !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #0a303a !important;
+  border-color: #0a303a !important;
+}
+
+/* -------------------------------------- Eléments ----------------------------------- */
+section {
+  padding-left: 15rem;
+  padding-right: 15rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 a {
@@ -128,12 +118,9 @@ a {
 
 /* -------------------------------------- mon-hr-personnalise  ----------------------------------- */
 .mon-hr-personnalise {
-  /* 1. Rendre le hr moins large et le centrer */
   width: 15vw;
-  /* Moins large : choisissez la taille qui vous plaît (e.g., 100px) */
   margin-left: auto;
   margin-right: auto;
-
   /* 2. Style des points/tiret et épaisseur */
   border-top: 4px;
   /* Augmente l'épaisseur de la ligne */
@@ -145,7 +132,6 @@ a {
 
 .border-primary {
   border-color: #c29356 !important;
-  /* orange */
 }
 
 /* -------------------------------------- Footer ----------------------------------- */

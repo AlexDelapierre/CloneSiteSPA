@@ -57,7 +57,7 @@
   font-weight: 600;
 }
 
-/* -------------------------------------- Section 1 ----------------------------------- */
+/* -------------------------------------- section-stars ----------------------------------- */
 
 /* ---Annimation du dynamicText --- */
 /* Style initial du span, pour assurer qu'il est visible au début */
@@ -78,19 +78,13 @@
   /* Même transition pour le fondu */
 }
 
-/* -------------------------------------- Section 2 ----------------------------------- */
+/* -------------------------------------- section-12-mois-d-actions ----------------------------------- */
 
-
-/* -------------------------------------- Section 4 ----------------------------------- */
-
-.section-4 {
-  background-color:#d5e6eb;
-}
-.section-4 .stats-grid {
+.section-12-mois-d-actions .stats-grid {
   color: #6d98a8;
   font-size: 1.5rem;
 }
-.section-4 .stats-grid-number {
+.section-12-mois-d-actions .stats-grid-number {
   font-size: 4.5rem;
   font-weight: bold;
 }
