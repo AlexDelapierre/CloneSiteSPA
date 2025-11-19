@@ -35,21 +35,14 @@ body {
   background-color: #c29356 !important;
 }
 
-.bg-secondary {
+.bg-motif-beige {
   background-image: url('assets/img/Home-hero/bg-motif-beige.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
-.bg-tertiary {
-  background-image: url('assets/img/Home-hero/bg-motif-beige.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-.bg-quaternary {
+.bg-blue {
   background-color: #d5e6eb; 
 }
 
@@ -135,13 +128,6 @@ a {
 }
 
 /* -------------------------------------- Footer ----------------------------------- */
-footer {
-  background-image: url('assets/img/Home-hero/bg-motif-beige.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
 .copyright {
   background-color: #0a303a;
   color: white;
